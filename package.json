@@ -2,7 +2,10 @@
   "name": "biblios",
   "version": "1.0.0",
   "description": "A react UI component library",
-  "main": "index.js",
+  "main": "./dist/bundle.dist.js",
+  "module": "./dist/bundle.dist.js",
+  "package-name": "biblios",
+  "module-name": "biblios",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",

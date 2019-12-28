@@ -1,7 +1,7 @@
 import {
-    PrimaryButton,
+    PrimaryButton
 } from './components';
 
-export {
+export default {
     PrimaryButton,
-};
+}
