@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const PrimaryButton = props =>{
     const {children, onClick} = props;
+    const StyledButton = styled.button`
+        padding: 20px 30px;
+        border: none;
+        background-color: #183bf0;
+        color: #f7f0d4;
+        font-size: 18px;
+    `;
     return(
-        <button
+        <StyledButton
             onClick={()=>{onClick()}}
-        >{children}</button>
-    )
+        >
+            {children}
+        </StyledButton>
+    );
 }
 
 export default PrimaryButton;
