@@ -3,7 +3,7 @@ const testRegex = require(path.resolve(__dirname, 'build-config', 'test-regex'))
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
     mode: 'production',
-    entry: path.resolve(__dirname, 'src', 'index'),
+    entry: path.resolve(__dirname, 'src', 'components', 'index'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.dist.js',
@@ -27,6 +27,7 @@ module.exports = {
     resolve: {
         alias: {
             components: path.resolve(__dirname, 'src/components/'),
+            styles: path.resolve(__dirname, 'src/styles/'),
         }
     }
 }
