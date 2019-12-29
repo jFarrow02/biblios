@@ -30,7 +30,23 @@ npm link
 **5. Change directories to the application into which you'll be importing its components. Link Biblios:**
 ```
 cd <your-project-location>
-npm run babel:package
+npm link biblios
+```
+
+**6. Import the desired Biblios named components and use them in your application:*
+```js
+//your-project.TestComponent
+import {PrimaryButton} from 'biblios';
+
+export default TestComponent = props =>{
+    //...
+    return(
+        <div>
+            <h2>Please click this button:</h2>
+            <PrimaryButton>Click Here</PrimaryButton>
+        </div>
+    )
+}
 ```
 **_TODO: 2019-12-28 21:39 EST_** Investigate packaging from the "dist" folder:
 `"babel:package": "set NODE_ENV=production && babel dist --out-dir biblios --ignore src/**/*.test.js --minified",`
