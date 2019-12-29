@@ -2,15 +2,15 @@
   "name": "biblios",
   "version": "1.0.0",
   "description": "A react UI component library",
-  "main": "./biblios/index.js",
-  "module": "./biblios/index.js",
+  "main": "./biblios/src/lib/index.js",
+  "module": "./biblios/src/lib/index.js",
   "package-name": "biblios",
   "module-name": "biblios",
   "scripts": {
     "test": "jest --colors",
     "build": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.dev.config.js",
-    "babel:package": "set NODE_ENV=production && babel src/components --out-dir biblios --ignore src/**/*.test.js --minified",
+    "babel:package": "set NODE_ENV=production && babel src --out-dir biblios --ignore src/**/*.test.js --minified",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
