@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import stylesConfig from '../../styles';
+import stylesConfig from '../styles';
 
 const PrimaryButton = props =>{
     const { children, onClick, disabled} = props;
@@ -17,6 +17,7 @@ const PrimaryButton = props =>{
         }};
         cursor: ${props => props.disabled ? 'normal' : 'pointer'};
         font-size: 18px;
+        margin: 10px 15px 10px 0px;
     `;
     return(
         <StyledButton
