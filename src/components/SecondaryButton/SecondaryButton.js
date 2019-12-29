@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import stylesConfig from '../../styles';
+import stylesConfig from '../styles';
 
 const SecondaryButton = props =>{
     const { children, onClick, disabled } = props;
@@ -13,6 +13,7 @@ const SecondaryButton = props =>{
         cursor: ${props => props.disabled ? 'normal' : 'pointer'};
         color: ${ props => {return stylesConfig.getType(props.type) }};
         font-size: 18px;
+        margin: 10px 15px 10px 0px;
     `;
     return(
         <StyledButton
