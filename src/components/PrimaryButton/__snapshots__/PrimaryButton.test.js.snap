@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match a snapshot 1`] = `
+<button
+  className="PrimaryButton__StyledButton-sc-1n4yz04-0 dQcDwt"
+  disabled={false}
+  onClick={[Function]}
+  type="normal"
+>
+  Button
+</button>
+`;
