@@ -3,56 +3,52 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import stylesConfig from '../../styles';
 
-const PrimaryButton = props =>{
-    const { children, onClick, disabled} = props;
+const SecondaryButton = props =>{
+    const { children, onClick, disabled } = props;
     const getType = type =>{
-        let bgColor;
+        let color;
         switch(type){
             case 'caution':
-                bgColor = stylesConfig.yellow05;
+                color = stylesConfig.yellow05;
                 break;
             case 'alert':
-                bgColor = stylesConfig.orange05;
+                color = stylesConfig.orange05;
                 break;
             case 'warning':
-                bgColor = stylesConfig.red05;
+                color = stylesConfig.red05;
                 break;
             case 'disabled':
-                bgColor = stylesConfig.gray05;
+                color = stylesConfig.gray05;
                 break;
             case 'normal':
                 default:
-                    bgColor = stylesConfig.blue05;
+                    color = stylesConfig.blue05;
         }
-        return bgColor;
+        return color;
     }
     const StyledButton = styled.button`
         padding: 15px 25px;
-        border: none;
-        background: ${ props=> { return getType(props.type) }};
-        color: ${ props => {
-            if(props.disabled){
-                return stylesConfig.gray08;
-            }
-            return stylesConfig.white;
-        }};
+        border: 1px solid ${ props => { return getType(props.type) }};
+        border-radius: 20px;
+        background: transparent;
         cursor: ${props => props.disabled ? 'normal' : 'pointer'};
+        color: ${ props => {return getType(props.type) }};
         font-size: 18px;
     `;
     return(
         <StyledButton
             disabled={disabled}
-            type={props.type}
             onClick={()=>{onClick()}}
+            type={props.type}
         >
             {children}
         </StyledButton>
     );
 }
 
-export default PrimaryButton;
+export default SecondaryButton;
 
-PrimaryButton.propTypes = {
+SecondaryButton.propTypes = {
     children: PropTypes.oneOfType(
         [
             PropTypes.string,
@@ -72,7 +68,7 @@ PrimaryButton.propTypes = {
     ),
 };
 
-PrimaryButton.defaultProps = {
+SecondaryButton.defaultProps = {
     children: 'Button',
     disabled: false,
     onClick: null,
