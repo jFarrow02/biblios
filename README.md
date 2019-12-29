@@ -7,18 +7,27 @@
 The following instructions describe how to use Biblios in your React applications.
 
 ### Installing Biblios
-1. Clone Biblios from Github: `git clone https://github.com/jFarrow02/biblios`
+**1. Clone Biblios from Github:** 
+```
+git clone https://github.com/jFarrow02/biblios.git
+```
 
-2. Navigate to the project root: `cd biblios`
+**2. Navigate to the project root:**
+```
+cd biblios
+```
 
-3. Install package dependencies via npm: `npm install`
+**3. Install package dependencies via npm:**
+```
+npm install
+```
 
-4. Build and link Biblios:
+**4. Build and link Biblios:**
 ```
 npm run babel:package
 npm link
 ```
-5. Change directories to the application into which you'll be importing its components. Link Biblios:
+**5. Change directories to the application into which you'll be importing its components. Link Biblios:**
 ```
 cd <your-project-location>
 npm run babel:package
