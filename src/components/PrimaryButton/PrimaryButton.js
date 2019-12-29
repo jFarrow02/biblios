@@ -5,31 +5,10 @@ import stylesConfig from '../../styles';
 
 const PrimaryButton = props =>{
     const { children, onClick, disabled} = props;
-    const getType = type =>{
-        let bgColor;
-        switch(type){
-            case 'caution':
-                bgColor = stylesConfig.yellow05;
-                break;
-            case 'alert':
-                bgColor = stylesConfig.orange05;
-                break;
-            case 'warning':
-                bgColor = stylesConfig.red05;
-                break;
-            case 'disabled':
-                bgColor = stylesConfig.gray05;
-                break;
-            case 'normal':
-                default:
-                    bgColor = stylesConfig.blue05;
-        }
-        return bgColor;
-    }
     const StyledButton = styled.button`
         padding: 15px 25px;
         border: none;
-        background: ${ props=> { return getType(props.type) }};
+        background: ${ props=> { return stylesConfig.getType(props.type) }};
         color: ${ props => {
             if(props.disabled){
                 return stylesConfig.gray08;

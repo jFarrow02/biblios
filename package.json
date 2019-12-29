@@ -47,6 +47,7 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/src/components/**/*.{js, jsx}",
+      "<rootDir>/src/styles/**/*.{js, jsx}",
       "!**/node_modules/**",
       "!**/vendor/**"
     ],
