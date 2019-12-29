@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.dev.config.js",
-    "babel:package": "set NODE_ENV=production && babel src/components --out-dir biblios --minified",
+    "babel:package": "set NODE_ENV=production && babel src/components --out-dir biblios --ignore src/**/*.test.js --minified",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
