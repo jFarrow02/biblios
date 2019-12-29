@@ -33,7 +33,7 @@ cd <your-project-location>
 npm link biblios
 ```
 
-**6. Import the desired Biblios named components and use them in your application:*
+**6. Import the desired Biblios named components and use them in your application:**
 ```js
 //your-project.TestComponent
 import {PrimaryButton} from 'biblios';
