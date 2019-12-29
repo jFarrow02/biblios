@@ -50,3 +50,9 @@ export default TestComponent = props =>{
 ```
 **_TODO: 2019-12-28 21:39 EST_** Investigate packaging from the "dist" folder:
 `"babel:package": "set NODE_ENV=production && babel dist --out-dir biblios --ignore src/**/*.test.js --minified",`
+
+## Components
+
+|Component Name     |Docs                                   |
+|-------------------|---------------------------------------|
+|PrimaryButton      |<https://github.com/jFarrow02/biblios/tree/dev/src/components/PrimaryButton>
