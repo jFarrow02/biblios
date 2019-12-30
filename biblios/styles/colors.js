@@ -4,6 +4,6 @@ orange05:"#FD4D0C",//YELLOW
 yellow05:"#FCCB1A",//GREEN
 green05:"#66B032",//BLUE
 blue05:"#0247FE",//PURPLE
-purple05:"#8601AF",//GRAY
-gray05:"#8c8c8c",gray08:"#bfbfbf",//WHITE
+purple05:"#8601AF",purple08:"#34090C",//GRAY
+gray03:"#cccccc",gray05:"#8c8c8c",gray08:"#bfbfbf",gray35:"#666666",//WHITE
 offWhite:"#f7f0d4",white:"#ffffff"};var _default=colors;exports["default"]=_default;

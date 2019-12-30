@@ -6,6 +6,9 @@ const config = {
         warning: 'red',
         disabled: 'gray',
     },
+    buttonBar: {
+        fontSize: '14px',
+    }
 };
 
 export default config;

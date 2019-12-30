@@ -16,6 +16,7 @@ const colors = {
     gray03: '#cccccc',
     gray05: '#8c8c8c',
     gray08: '#bfbfbf',
+    gray35: '#666666',
     //WHITE
     offWhite: '#f7f0d4',
     white: '#ffffff',

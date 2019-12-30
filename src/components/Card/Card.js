@@ -18,12 +18,20 @@ const StyledCard = styled.div`
         }
     `;
 
+    const StyledBottomBorder = styled.div`
+        background-color: ${props => props.footerColor ? props.footerColor : stylesConfig.gray03};
+        width: 95%;
+        height: 2px;
+        margin: 0 auto;
+    `;
+
     const StyledContentHeader = styled.div`
-        border-bottom: 1px solid ${stylesConfig.gray03};
+        color: ${props => props.color ? props.color : stylesConfig.gray35};
     `;
     
     const StyledCardFooter = styled.div`
-        background-color: ${stylesConfig.gray03};
+        background-color: ${props => props.footerColor ? props.footerColor : stylesConfig.gray03};
+        color: ${props => props.color ? props.color : stylesConfig.gray35};
     `;
 
     const StyledCardContent = styled.div`
@@ -38,7 +46,10 @@ const Card = props =>{
        <StyledCard>
            {
             header&&
-           <StyledContentHeader>{headerContent}</StyledContentHeader>
+            <React.Fragment>
+                <StyledContentHeader>{headerContent}</StyledContentHeader>
+                <StyledBottomBorder/>
+            </React.Fragment>
            }
            <StyledCardContent>
                {content}
@@ -56,8 +67,10 @@ const Card = props =>{
 export default Card;
 
 Card.propTypes = {
+    color: PropTypes.string,
     content: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
     footer: PropTypes.bool,
+    footerColor: PropTypes.string,
     footerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
     header: PropTypes.bool,
     headerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
@@ -65,8 +78,10 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
+    color: null,
     content: '',
     footer: false,
+    footerColor: null,
     footerContent: '',
     header: false,
     headerContent: '',
