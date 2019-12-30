@@ -10,12 +10,6 @@ const StyledCard = styled.div`
         max-width: ${props => props.width ? props.width : 500}px;
         display: flex;
         flex-direction: column;
-        h1, h2, h3, h4, h5, h6{
-            margin: 0px;
-            margin-block-start: 0px;
-            margin-block-end: 0px;
-            padding: 10px;
-        }
     `;
 
     const StyledBottomBorder = styled.div`
@@ -26,13 +20,13 @@ const StyledCard = styled.div`
     `;
 
     const StyledContentHeader = styled.div`
-        color: ${props => props.color ? props.color : stylesConfig.gray35};
+        padding: 20px 10px;
     `;
     
     const StyledCardFooter = styled.div`
         background-color: ${props => props.footerColor ? props.footerColor : stylesConfig.gray03};
-        color: ${props => props.color ? props.color : stylesConfig.gray35};
-    `;
+        padding: 20px 10px;
+        `;
 
     const StyledCardContent = styled.div`
         padding: 20px 10px;
