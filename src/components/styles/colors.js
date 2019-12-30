@@ -11,7 +11,9 @@ const colors = {
     blue05: '#0247FE',
     //PURPLE
     purple05: '#8601AF',
+    purple08: '#34090C',
     //GRAY
+    gray03: '#cccccc',
     gray05: '#8c8c8c',
     gray08: '#bfbfbf',
     //WHITE

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match a snapshot 1`] = `
+<div
+  className="Card__StyledCard-sc-1gijcbc-0 laoIgD"
+>
+  <div
+    className="Card__StyledCardContent-sc-1gijcbc-3 dMkYTu"
+  >
+    
+  </div>
+</div>
+`;

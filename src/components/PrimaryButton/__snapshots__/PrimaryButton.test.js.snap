@@ -2,7 +2,7 @@
 
 exports[`should match a snapshot 1`] = `
 <button
-  className="PrimaryButton__StyledButton-sc-1n4yz04-0 dQcDwt"
+  className="PrimaryButton__StyledButton-sc-1n4yz04-0 VKVYj"
   disabled={false}
   onClick={[Function]}
   type="normal"
