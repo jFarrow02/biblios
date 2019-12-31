@@ -10,7 +10,7 @@ const Link = styled.div`
         color: ${props => props.color};
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 20px;
+        padding-left: ${props => props.leftPadding}px;
     `;
 
 const LinkForeground = styled.div`
@@ -19,7 +19,7 @@ const LinkForeground = styled.div`
     left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: ${props => props.leftPadding}px;
     width: 0;
     opacity: 0;
     font-size: 18px;
@@ -35,6 +35,7 @@ const LinkForeground = styled.div`
 `;
 
 const LinkContent = styled.div`
+    width: ${props => props.width};
     background-color: transparent;
     color: ${props => props.color};
     font-size: 18px;
@@ -45,16 +46,18 @@ const StyledLink = props => {
         <Link
             color={props.color}
             initBgColor={props.initBgColor}
+            leftPadding={props.leftPadding}
             width={props.width}
         >
             <LinkForeground
+                leftPadding={props.leftPadding}
                 newBgColor={props.newBgColor}
                 onClick={(e)=>{props.onClick(e);}}
                 width={props.width}
             >
                 {props.content}
             </LinkForeground>
-            <LinkContent color={props.color}>{props.content}</LinkContent>
+            <LinkContent color={props.color} width={props.width}>{props.content}</LinkContent>
         </Link>
     )
 }
@@ -69,6 +72,7 @@ StyledLink.propTypes = {
     destination: PropTypes.string,
     height: PropTypes.number,
     initBgColor: PropTypes.string,
+    leftPadding: PropTypes.number,
     newBgColor: PropTypes.string,
     onClick: PropTypes.func,
     width: PropTypes.number,
@@ -80,6 +84,7 @@ StyledLink.defaultProps = {
     destination: '#',
     height: 125,
     initBgColor: stylesConfig.gray01,
+    leftPadding: 20,
     newBgColor: stylesConfig.gray08,
     onClick: null,
     width: 250,
