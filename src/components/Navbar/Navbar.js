@@ -13,6 +13,9 @@ const LinkContainer = styled.div`
     width: ${props => props.width + props.leftPadding}px;
     border-bottom: ${props => props.direction === 'column' ? `1px solid ${props.color}` : ''};
     border-right: ${props => props.direction === 'row' ? `1px solid ${props.color}` : ''};
+    ${Nav} & :last-of-type{
+        border: none;
+    }
 `;
 
 const Navbar = props => {
