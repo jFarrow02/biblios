@@ -13,6 +13,7 @@ const colors = {
     purple05: '#8601AF',
     purple08: '#34090C',
     //GRAY
+    gray01: '#f2f2f2',
     gray03: '#cccccc',
     gray05: '#8c8c8c',
     gray08: '#bfbfbf',

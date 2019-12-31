@@ -6,7 +6,7 @@ import stylesConfig from '../styles';
 const StyledCard = styled.div`
         margin-top: 10px;
         margin-bottom: 10px;
-        box-shadow: 3px 3px 5px 3px rgba(204, 204, 204, .5);
+        box-shadow: 3px 3px 5px 3px rgba(102, 102, 102, .5);
         max-width: ${props => props.width ? props.width : 500}px;
         display: flex;
         flex-direction: column;
