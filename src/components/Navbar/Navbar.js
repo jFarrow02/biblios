@@ -10,7 +10,7 @@ const Nav = styled.nav`
 `;
 
 const LinkContainer = styled.div`
-    width: ${props => props.width + props.leftPadding}px;
+    width: ${props => props.width + props.leftPadding + props.rightPadding}px;
     border-bottom: ${props => props.direction === 'column' ? `1px solid ${props.color}` : ''};
     border-right: ${props => props.direction === 'row' ? `1px solid ${props.color}` : ''};
     ${Nav} & :last-of-type{
@@ -19,11 +19,12 @@ const LinkContainer = styled.div`
 `;
 
 const Navbar = props => {
-    const {content, direction, leftPadding, width} = props;
+    const {content, direction, leftPadding, rightPadding, width} = props;
     return(
        <Nav
         direction={direction}
         leftPadding={leftPadding}
+        rightPadding={rightPadding}
         width={width}
         >
            {
@@ -34,11 +35,13 @@ const Navbar = props => {
                             direction={direction}
                             key={idx}
                             leftPadding={leftPadding}
+                            rightPadding={rightPadding}
                             width={width}
                         >
                          <StyledLink
                             content={item.content}
                             leftPadding={leftPadding}
+                            rightPadding={rightPadding}
                             width={width}
                         />
                        </LinkContainer>
@@ -57,6 +60,7 @@ Navbar.propTypes = {
     content: PropTypes.arrayOf(PropTypes.object),
     direction: PropTypes.oneOf(['column', 'row']),
     leftPadding: PropTypes.number,
+    rightPadding: PropTypes.number,
     width: PropTypes.number,
 };
 
@@ -65,6 +69,7 @@ Navbar.defaultProps = {
     content: [],
     direction: 'row',
     leftPadding: 0,
+    rightPadding: 0,
     width: 350,
 };
 
