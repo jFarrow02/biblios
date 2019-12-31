@@ -10,24 +10,33 @@ const Nav = styled.nav`
 `;
 
 const LinkContainer = styled.div`
+    width: ${props => props.width + props.leftPadding}px;
     border-bottom: ${props => props.direction === 'column' ? `1px solid ${props.color}` : ''};
     border-right: ${props => props.direction === 'row' ? `1px solid ${props.color}` : ''};
 `;
 
 const Navbar = props => {
-    const {content} = props;
+    const {content, direction, leftPadding, width} = props;
     return(
        <Nav
-        direction={props.direction}
-        width={props.width}
+        direction={direction}
+        leftPadding={leftPadding}
+        width={width}
         >
            {
                content.map((item, idx)=> {
                    return(
-                       <LinkContainer color={props.color} direction={props.direction}>
+                       <LinkContainer
+                            color={props.color}
+                            direction={direction}
+                            key={idx}
+                            leftPadding={leftPadding}
+                            width={width}
+                        >
                          <StyledLink
                             content={item.content}
-                            key={idx}
+                            leftPadding={leftPadding}
+                            width={width}
                         />
                        </LinkContainer>
                    
@@ -44,6 +53,7 @@ Navbar.propTypes = {
     color: PropTypes.string,
     content: PropTypes.arrayOf(PropTypes.object),
     direction: PropTypes.oneOf(['column', 'row']),
+    leftPadding: PropTypes.number,
     width: PropTypes.number,
 };
 
@@ -51,6 +61,7 @@ Navbar.defaultProps = {
     color: '#000000',
     content: [],
     direction: 'row',
+    leftPadding: 0,
     width: 350,
 };
 

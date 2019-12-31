@@ -13,4 +13,4 @@ const content = [
 
 storiesOf('Navbar', module)
     .add('default', ()=> <Navbar content={content}/>)
-    .add('column', ()=> <Navbar content={content} direction='column'/>)
+    .add('column', ()=> <Navbar content={content} direction={'column'} leftPadding={20} width={400}/>)
