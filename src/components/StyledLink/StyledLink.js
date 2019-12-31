@@ -6,7 +6,7 @@ import stylesConfig from '../styles';
 const Link = styled.div`
         position: relative;
         background-color: ${props => props.initBgColor ? props.initBgColor : stylesConfig.gray01};
-        width: ${props => props.width}px;
+        width: ${props => props.width + props.leftPadding}px;
         color: ${props => props.color};
         padding-top: 10px;
         padding-bottom: 10px;
@@ -29,13 +29,13 @@ const LinkForeground = styled.div`
     }
     ${Link}:hover & {
         background-color: ${props => props.newBgColor ? props.newBgColor : stylesConfig.gray08};
-        width: ${props => props.width}px;
+        width: ${props => props.width + props.leftPadding}px;
         opacity: 1;
     }
 `;
 
 const LinkContent = styled.div`
-    width: ${props => props.width};
+    width: ${props => props.width + props.leftPadding}px;
     background-color: transparent;
     color: ${props => props.color};
     font-size: 18px;
