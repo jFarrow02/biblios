@@ -52,6 +52,13 @@ const StyledLink = props => {
             rightPadding={props.rightPadding}
             width={props.width}
         >
+            {
+                /**
+                 * TODO: 2019-12-31 18:36 EST 
+                 * INVESTIGATE REFACTORING LinkForeground AND LinkContent INTO BUTTONS, OR
+                 * ARIA ATTRIBUTES TO HELP SCREEN READERS DETECT THEM AS ACTION BUTTONS/LINKS
+                 */
+            }
             <LinkForeground
                 leftPadding={props.leftPadding}
                 newBgColor={props.newBgColor}
