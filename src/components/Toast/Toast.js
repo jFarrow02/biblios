@@ -52,13 +52,25 @@ const ToastTab = styled.div`
 `;
 
 const Toast = props =>{
+    useEffect(()=>{
+        function clearAnimationTimeout(){
+                window.clearTimeout(animationId);
+            }
+        }
+    );
     const [animationName, setAnimationName] = useState('');
     const [animationId, setAnimationId] = useState(null);
     const toggleToast = (name)=>{
+        //Allow currently-in-progress animation to finish
+        if(animationName){
+            return;
+        }
         setAnimationName(name);
-       const animate = setTimeout(()=>{
-           setAnimationName(null);
-       }, 1050);
+        const animate = setTimeout(()=>{
+               setAnimationName(null);
+           }, 1050);
+       
+        setAnimationId(animate);
     };
     const {children, content} = props;
     return(
