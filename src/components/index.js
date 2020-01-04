@@ -5,6 +5,7 @@ import NavbarVertical from './NavbarVertical';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import StyledLink from './StyledLink';
+import Toast from './Toast';
 
 export {
     ButtonBar,
@@ -14,4 +15,5 @@ export {
     PrimaryButton,
     SecondaryButton,
     StyledLink,
+    Toast,
 }
