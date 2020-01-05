@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 250px 100px;
+    grid-template-rows: 250px auto;
     border: 1px solid deeppink;
+    padding: 40px;
 `;
 
 const CarouselContainer = styled.div`
@@ -22,6 +23,7 @@ const CarouselContent = styled.div`
     z-index: ${props => props.index};
     height: 250px;
     border: 1px solid darkgreen;
+    opacity: 1;
 `;
 
 const CarouselControls = styled.div`
@@ -32,6 +34,23 @@ const CarouselControls = styled.div`
 
 const Carousel = props => {
     const {content} = props;
+    let count = 0;
+    const [carouselId, setCarouselId] = useState(null);
+    const [contentLength, setContentLength] = useState(props.content.length);
+    const intervalId = setInterval(()=>{
+        console.log(count);
+        if(count === content.length -1){
+            count = 0;
+        }else{
+            count++;
+        }
+    }, 3000);
+    console.log('intervalId:', intervalId);
+    useEffect(()=>{
+        return function clearCarousel(){
+            window.clearInterval(intervalId);
+        }
+    })
     return(
         <Wrapper>
             <CarouselContainer>
@@ -45,7 +64,7 @@ const Carousel = props => {
                 })}
             </CarouselContainer>
             <CarouselControls>
-                controls go here
+                controls go here...now
             </CarouselControls>
         </Wrapper>
     )
