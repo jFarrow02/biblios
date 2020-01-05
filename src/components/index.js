@@ -1,5 +1,6 @@
 import ButtonBar from './ButtonBar';
 import Card from './Card';
+import Carousel from './Carousel';
 import Navbar from './Navbar';
 import NavbarVertical from './NavbarVertical';
 import PrimaryButton from './PrimaryButton';
@@ -10,6 +11,7 @@ import Toast from './Toast';
 export {
     ButtonBar,
     Card,
+    Carousel,
     Navbar,
     NavbarVertical,
     PrimaryButton,
